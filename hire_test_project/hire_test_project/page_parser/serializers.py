@@ -5,7 +5,7 @@ __all__ = ('TagsPostInputSerializer', 'TagsPostOutputSerializer',
 
 class TagsPostInputSerializer(serializers.Serializer):
     # Можно поменять на CharField чтобы ослабить валидацию
-    url = serializers.URLField()
+    url = serializers.CharField()
 
 class TagsPostOutputSerializer(serializers.Serializer):
     task_id = serializers.CharField()
