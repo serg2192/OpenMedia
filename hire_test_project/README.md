@@ -36,7 +36,7 @@ source ./venv/bin/activate
 
 Установить все зависимости:
 ```
-pip install -r hire_test_project/requirements/requirements/txt
+pip install -r hire_test_project/requirements/requirements.txt
 ```
 
 
