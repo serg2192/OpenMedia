@@ -22,7 +22,7 @@ create user sondrin with superuser createdb replication password '123';
 Склонировать репозиторий:
 
 ```
-git clone https://github.com/serg2192/open_media.git
+git clone https://github.com/serg2192/OpenMedia.git
 git checkout master
 ```
 
