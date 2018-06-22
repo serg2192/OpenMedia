@@ -94,6 +94,7 @@ python manage.py runserver
     ```
     curl -X POST localhost:8000/parse/tags -H "Content-Type: application/json" -d '{"url":"http://yandex.ru"}'
     ```
+    На данный момент требуется указывать схему(http://)
 - parse/tags как GET метод. Принимает номер задачи из Celery в качестве аргумента в строке запроса
 
     Пример запроса:
