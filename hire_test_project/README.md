@@ -29,8 +29,9 @@ git checkout master
 Создать виртуальное окружение:
 
 ```
-cd open_media
+cd OpenMedia
 virtualenv ./venv
+source ./venv/bin/activate
 ```
 
 Установить все зависимости:
