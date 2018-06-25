@@ -11,15 +11,20 @@
 
 ## Установка приложения
 
-Установка Python, PostgreSQL, Celery, Redis происходит по соответствующим мануалам.
+Установка Python, PostgreSQL, Redis происходит по соответствующим мануалам.
 
 #### PostgreSQL
-Создать юзера sondrin. Для этого можно например зайти в консоль psql под суперюзером и выполнить:
+Создать юзера **sondrin**. Для этого можно например зайти в консоль psql под суперюзером и выполнить:
 ```
 create user sondrin with superuser createdb replication password '123';
 ```
 
 Можно не давать права superuser, replication, но я дал.
+
+Создать базу данных **om_task**:
+```
+create database om_task;
+```
 
 #### Установка приложения
 
@@ -87,14 +92,14 @@ python manage.py runserver
 
 ## API
 
-На данный момент у приложения есть следующие url:
+На данный момент у приложения есть следующие endpoint'ы:
 - parse/tags как POST метод требует чтобы в теле запроса был передан урл страницы для парсинга.
 
     Пример запроса:
     ```
     curl -X POST localhost:8000/parse/tags -H "Content-Type: application/json" -d '{"url":"http://yandex.ru"}'
     ```
-    На данный момент требуется указывать схему(http://)
+    На данный момент требуется указывать схему(http://, https://) в передаваемом url.
 - parse/tags как GET метод. Принимает номер задачи из Celery в качестве аргумента в строке запроса
 
     Пример запроса:
